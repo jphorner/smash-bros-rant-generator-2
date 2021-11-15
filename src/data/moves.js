@@ -1,0 +1,23 @@
+export const moves = [
+  "jab",
+  "up tilt",
+  "down tilt",
+  "forward tilt",
+  "up smash",
+  "down smash",
+  "forward smash",
+  "up throw",
+  "down throw",
+  "forward throw",
+  "back throw",
+  "neutral air",
+  "up air",
+  "down air",
+  "forward air",
+  "back air",
+  "dash attack",
+  "up special",
+  "down special",
+  "side special",
+  "neutral special"
+];

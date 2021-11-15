@@ -1,0 +1,9 @@
+.rant-display {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  width: 80%;
+  height: 30%;
+  flex-wrap: wrap;
+  color: white;
+}
