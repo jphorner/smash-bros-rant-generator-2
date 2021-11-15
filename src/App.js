@@ -39,7 +39,7 @@ class App extends Component {
   render() {
     return (
       <main>
-        <header>Yo</header>
+        <header>The Smash Ultimate Rant Generator</header>
         <div className="App">
           <div className="form-container">
             <Form submitCharacter={this.submitCharacter} />

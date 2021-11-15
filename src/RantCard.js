@@ -13,9 +13,11 @@ const RantCard = (props) => {
 
   return (
     <div className="rant-card">
-      <h3>{props.name}</h3>
-      {introSwitch === 1 && <h4>{intros[randomInt]}{props.name}? {randomGripe[randomInt]}</h4>}
-      {introSwitch === 2 && <h4>{intros2[randomInt]}{props.name}. {randomGripe[randomInt]}</h4>}
+      <div className="rant-text-container">
+        <h3>{props.name}</h3>
+        {introSwitch === 1 && <h4>{intros[randomInt]}{props.name}? {randomGripe[randomInt]}</h4>}
+        {introSwitch === 2 && <h4>{intros2[randomInt]}{props.name}. {randomGripe[randomInt]}</h4>}
+      </div>
     </div>
   )
 }
