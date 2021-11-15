@@ -34,6 +34,9 @@ class App extends Component {
     const characterToSet = characterDropdown.value;
     this.setState({ selectedCharacter: characterToSet })
     setTimeout(() => { console.log('Test: ', this.state.selectedCharacter) }, 20);
+
+    const characterForm = document.getElementById('formContainer');
+    characterForm.classList.add('shifted');
   }
 
   render() {
@@ -41,11 +44,11 @@ class App extends Component {
       <main>
         <header>The Smash Ultimate Rant Generator</header>
         <div className="App">
-          <div className="form-container">
-            <Form submitCharacter={this.submitCharacter} />
-          </div>
           <div className="rants-container">
             <Rants data={this.state.allCharacters} selection={this.state.selectedCharacter}/>
+          </div>
+          <div className="form-container">
+            <Form submitCharacter={this.submitCharacter} />
           </div>
         </div>
       </main>

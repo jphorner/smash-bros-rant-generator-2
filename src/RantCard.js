@@ -18,6 +18,7 @@ const RantCard = (props) => {
         {introSwitch === 1 && <h4>{intros[randomInt]}{props.name}? {randomGripe[randomInt]}</h4>}
         {introSwitch === 2 && <h4>{intros2[randomInt]}{props.name}. {randomGripe[randomInt]}</h4>}
       </div>
+      <button className="save-rant-button"></button>
     </div>
   )
 }

@@ -1,0 +1,78 @@
+.form-container {
+  margin-top: 25%;
+  display: flex;
+  justify-content: center;
+}
+
+.character-selection-form {
+  display: flex;
+  flex-direction: column;
+  background: rgb(0,50,65);
+  background: linear-gradient(117deg, rgba(0,50,65,1) 0%, rgba(0,70,91,1) 48%, rgba(250,251,252,1) 48%, rgba(255,255,255,1) 49%, rgba(163,25,25,1) 49%, rgba(185,43,0,1) 77%);
+  padding: 1rem;
+  width: auto;
+  color: white;
+  border: 1px solid white;
+  box-shadow: 2px 2px 2px black;
+}
+
+.selection-text {
+  font-family: 'Comfortaa';
+  margin: 1rem;
+  background-color: #23292b;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.character-dropdown {
+  height: 2rem;
+  font-size: 1.2rem;
+  background-color: white;
+  border: 0px;
+  margin: 0rem 1rem 1rem 1rem;
+  font-family: 'Comfortaa';
+}
+
+.character-dropdown:hover {
+  color: #D10000;
+  font-weight: bold;
+}
+
+.submit-character-button {
+  flex-direction: column;
+  justify-content: center;
+  height: 3rem;
+  width: auto;
+  border: 2px solid white;
+  background-color: #23292b;
+  font-family: 'Bungee Shade', cursive;
+  color: white;
+  font-size: 2.5rem;
+  padding: .1rem 1.1rem .3rem 1.1rem;
+  margin-top: 1rem;
+  z-index: 2;
+}
+
+.submit-character-button:hover {
+  background-color: white;
+  color: #D10000;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.submit-character-button:active {
+  background-image: url('./assets/fire-station-15.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.shifted {
+  position: absolute;
+  margin-top: 0px;
+  top: 12%;
+  left: 1%;
+}

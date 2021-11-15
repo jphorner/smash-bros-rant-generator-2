@@ -14,7 +14,7 @@ export const intros = [
 
 export const intros2 = [
   "I will literally explode if I have to fight another ",
-  "Out of all the characters they could have added, of course Nintendo had choose ",
+  "Out of all the characters they could have added, of course Nintendo had to choose ",
   "I almost had a good day today, but that was all over the second I had to fight ",
   "The biggest problem in this community isn't toxicity. It's ",
   "I believe most people are good people...that is, unless they main ",
