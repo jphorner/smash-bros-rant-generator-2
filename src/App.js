@@ -13,7 +13,8 @@ class App extends Component {
     super();
     this.state = {
       allCharacters: [],
-      selectedCharacter: ''
+      selectedCharacter: '',
+      savedRants: []
     }
   }
 
@@ -33,19 +34,28 @@ class App extends Component {
     const characterDropdown = document.getElementById('characterDropdown');
     const characterToSet = characterDropdown.value;
     this.setState({ selectedCharacter: characterToSet })
-    setTimeout(() => { console.log('Test: ', this.state.selectedCharacter) }, 20);
 
     const characterForm = document.getElementById('formContainer');
     characterForm.classList.add('shifted');
   }
 
+  saveRant = (event) => {
+    const card = document.querySelector('.rant-card');
+    const cardId = card.id;
+
+    const characterName = document.getElementById('characterName').innerText;
+    const rantText = document.getElementById('rantText').innerText;
+    let savedRant = { id: (this.state.savedRants.length + 1), name: characterName, text: rantText };
+    this.state.savedRants.push(savedRant);
+  }
+
   render() {
     return (
       <main>
-        <header>The Smash Ultimate Rant Generator</header>
+        <header>Smash Ultimate Rant Generator</header>
         <div className="App">
           <div className="rants-container">
-            <Rants data={this.state.allCharacters} selection={this.state.selectedCharacter}/>
+            <Rants data={this.state.allCharacters} selection={this.state.selectedCharacter} saveRant={this.saveRant}/>
           </div>
           <div className="form-container">
             <Form submitCharacter={this.submitCharacter} />

@@ -28,7 +28,7 @@ h3 {
   right: 2rem;
   height: 60px;
   width: 50px;
-  border: 1px solid white;
+  border: 0px;
   background-color: white;
   background-image: url('./assets/save-ribbon.png');
   background-repeat: repeat;
@@ -37,5 +37,5 @@ h3 {
 }
 
 .save-rant-button:hover {
-  border: 1px solid red;
+  background-image: url('./assets/save-ribbon-active.png');
 }
