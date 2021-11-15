@@ -18,13 +18,22 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    fetch('http:localhost:3001/api/v1/characters')
-    .then(response => response.json())
-    .then(data => {
-      const characterData = data;
-      this.setState({ allCharacters: characterData })
-    })
+    // fetch('http:localhost:3001/api/v1/characters')
+    // .then(response => response.json())
+    // .then(data => {
+    //   const characterData = data;
+    //   this.setState({ allCharacters: characterData })
+    // })
+    this.setState({ allCharacters: characters });
 
+  }
+
+  submitCharacter = (event) => {
+    event.preventDefault();
+    const characterDropdown = document.getElementById('characterDropdown');
+    const characterToSet = characterDropdown.value;
+    this.setState({ selectedCharacter: characterToSet })
+    setTimeout(() => { console.log('Test: ', this.state.selectedCharacter) }, 20);
   }
 
   render() {
@@ -32,9 +41,11 @@ class App extends Component {
       <main>
         <header>Yo</header>
         <div className="App">
+          <div className="form-container">
+            <Form submitCharacter={this.submitCharacter} />
+          </div>
           <div className="rants-container">
-            <Form />
-            <Rants data={this.state.allCharacters} />
+            <Rants data={this.state.allCharacters} selection={this.state.selectedCharacter}/>
           </div>
         </div>
       </main>

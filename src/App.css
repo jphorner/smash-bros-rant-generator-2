@@ -1,6 +1,8 @@
 main {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 header {
@@ -9,6 +11,7 @@ header {
   margin: 0px;
   padding: 0px;
   border: 0px;
+  justify-content: center;
 }
 
 h1 {
