@@ -1,12 +1,14 @@
 import './App.css';
 import React, { Component } from 'react';
-import { characters } from './data/characters';
+import { BrowserRouter as Router, Route, NavLink, Routes } from 'react-router-dom';
 import Rants from './Rants.js';
 import './Rants.css';
 import RantCard from './RantCard.js';
 import './RantCard.css';
 import Form from './Form.js';
 import './Form.css';
+import SavedRants from './SavedRants.js';
+import './SavedRants.css';
 
 class App extends Component {
   constructor() {
@@ -19,14 +21,12 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    // fetch('http:localhost:3001/api/v1/characters')
-    // .then(response => response.json())
-    // .then(data => {
-    //   const characterData = data;
-    //   this.setState({ allCharacters: characterData })
-    // })
-    this.setState({ allCharacters: characters });
-
+    fetch('api/v1/ultimate/characters')
+    .then(response => response.json())
+    .then(data => {
+      const characterData = data;
+      this.setState({ allCharacters: characterData })
+    });
   }
 
   submitCharacter = (event) => {
@@ -46,22 +46,33 @@ class App extends Component {
     const characterName = document.getElementById('characterName').innerText;
     const rantText = document.getElementById('rantText').innerText;
     let savedRant = { id: (this.state.savedRants.length + 1), name: characterName, text: rantText };
-    this.state.savedRants.push(savedRant);
+    this.setState({ savedRants: [...this.state.savedRants, savedRant]})
   }
 
   render() {
     return (
-      <main>
-        <header>Smash Ultimate Rant Generator</header>
-        <div className="App">
-          <div className="rants-container">
-            <Rants data={this.state.allCharacters} selection={this.state.selectedCharacter} saveRant={this.saveRant}/>
+      <Router>
+        <main>
+          <header>Smash Ultimate Rant Generator</header>
+          <NavLink exact to='/saved-rants' className="saved-rants-link navlink">Saved Rants</NavLink>
+          <NavLink exact to='/' className="home-link navlink">Home</NavLink>
+          <div className="App">
+            <Routes>
+              <Route path="/" element={
+                <>
+                  <Rants data={this.state.allCharacters} selection={this.state.selectedCharacter} saveRant={this.saveRant}/>
+                  <Form submitCharacter={this.submitCharacter} />
+                </>
+                } />
+              <Route exact path="/saved-rants" element={
+                <>
+                  <SavedRants savedRants={this.state.savedRants}/>
+                </>
+                } />
+            </Routes>
           </div>
-          <div className="form-container">
-            <Form submitCharacter={this.submitCharacter} />
-          </div>
-        </div>
-      </main>
+        </main>
+      </Router>
     );
   }
 }
