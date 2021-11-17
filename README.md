@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Super Smash Bros. Ultimate Rant Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Are you tired of writing out long tirades about your least favorite Super Smash Bros. characters? Good news - this app will save you time by doing it for you!
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+The Smash Bros. Ultimate Rant Generator allows you to:
 
-### `npm start`
+- Select from a full list of characters featured in Super Smash Bros. Ultimate
+- Generate a randomized rant incorporating your selected character
+- Save your favorite rants for later viewing
+- View your saved rants from a convenient Saved Rants page
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This app is still in development, so expect more to come in the near future!
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installation
 
-### `npm test`
+This app will be deployed in the coming week.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+For now, clone down this application and run it in your CL/Terminal using `npm start`.
 
-### `npm run build`
+## Usage Steps
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- You will see a form prompting you to select a character upon visiting the landing page.
+- Select a character and press 'Make Me Rage' to generate a rant card.
+  - You may generate different rant cards for a single character by repeatedly clicking 'Make Me Rage'.
+- Once you find a rant you like, click the ribbon icon in the upper-right of the card to save it.
+  - **Note:** Saving a card will prompt it to re-render with a new rant, but your rant has been saved.
+- To view your saved rants, click on the 'Saved Rants' link in the upper-right of the page.
+  - You can save as many rants as you like; saving will simply lengthen the Saved Rants page.
+- To generate new cards, simply click 'Home' to return to the form view.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project Information
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Goals
 
-### `npm run eject`
+I decided to make this app as an in-joke for the competitive Super Smash Bros. community. Having played this game for years, I've seen my fair share of rants in online forums and at tournaments. Being given near-complete creative freedom for this project at Turing, I wanted to create something that would make people laugh. Although this project isn't finished yet, I plan on expanding its scope to make quippy, shareable content for all fans and competitors of this wonderful game. (Plus, this has been a blast to work on!)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Timeline
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+I started by creating a simple React app which displayed a form to create randomly generated cards. Once the boilerplate was set up, I got to work writing down a few dozen phrases and clauses to pull from when creating each card. (Conjunction Junction, am I right?)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Next, I incorporated the [Super Smash Bros. Unofficial API by Leonardo Cabeza](https://smashbros-unofficial-api.vercel.app/) to pull in character names. I initially hit a snag when I failed to fetch the data due to a CORS error, so I made a separate file and pasted the API data in as a stopgap to use in the interim. Fortunately, I was able to get in contact with Leonardo to ask about the error and find a solution. He was kind enough to take another look at the API and offered me a solution which worked!
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Now the application fetches directly from the API to store the character data in the app's state. Most of this data went unused, but I plan to write out more phrases that take advantage of it soon. Thank you again to Leonardo Cabeza for creating this API, and being willing to help me a full year after it was released!
 
-## Learn More
+For more information on future additions to this application, please read the Future Plans section below in this README.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Challenges
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Beyond the API call issue, I underestimated how time-consuming this project would be to put together. From styling to routing to rendering, each step provided a unique challenge for me to overcome.
 
-### Code Splitting
+One unexpected challenge was writing the rant phrases. I needed to create them in such a way that character names could be interpolated in the same syntactic positions, and changing that position required separate arrays with similar phrases that also used that position. Because of this, I was only able to get a few dozen phrases written. Now that the app is set up, however, I can spend more time on the rants themselves and reference character aspects like move sets.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Technologies Used
 
-### Analyzing the Bundle Size
+- React
+- React Router
+- CSS
+- Cypress Testing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Future Plans
 
-### Making a Progressive Web App
+I plan to add the following in the near future:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Longer rant cards
+- Addition of specific character attributes
+- Specific pronouns for each character so that statements feel more natural
+- Other rant options (such as lambasting Nintendo for not buffing low-tiers)
+- Local storage for saved rants
+- A Total Randomization option to skip character selection
+- Character icons on each card
 
-### Advanced Configuration
+## Contributions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- This app was developed by [Joshua Horner](https://github.com/jphorner)
 
-### Deployment
+- Unofficial Smash Bros. API by [Leonardo Cabeza](https://github.com/leocabeza/smashbros-unofficial-api)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Project spec and rubric provided by the [Turing School of Software and Design](turing.edu)
