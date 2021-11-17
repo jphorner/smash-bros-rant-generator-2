@@ -1,7 +1,41 @@
 .rant-card {
+  position: relative;
   padding: 1rem;
-  width: 20%;
-  background-color: pink;
+  max-width: 40%;
+  background: rgb(209,0,0);
+  background: linear-gradient(117deg, rgba(209,0,0,1) 0%, rgba(255,112,64,1) 100%);
   color: black;
   margin: 1rem;
+  box-shadow: 2px 2px 2px black;
+}
+
+.rant-text-container {
+  padding: 1.5rem;
+  background-color: white;
+  font-family: 'Comfortaa';
+  line-height: 1.4rem;
+}
+
+h3 {
+  font-family: 'Bungee Shade', cursive;
+  color: black;
+  font-size: 2rem;
+}
+
+.save-rant-button {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  height: 60px;
+  width: 50px;
+  border: 0px;
+  background-color: white;
+  background-image: url('./assets/save-ribbon.png');
+  background-repeat: repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.save-rant-button:hover {
+  background-image: url('./assets/save-ribbon-active.png');
 }
