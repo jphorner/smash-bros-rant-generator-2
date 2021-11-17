@@ -1,0 +1,16 @@
+.saved-rants-container {
+  display: flex;
+  justify-content: center;
+}
+
+.saved-rants {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.saved-rants > .rant-card {
+  max-width: 70%;
+}

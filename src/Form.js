@@ -1,24 +1,25 @@
 import React, { Component } from 'react';
 import './Form.css';
-import { characters } from './data/characters.js';
+import { characterNames } from './data/characterNames';
 
 class Form extends Component {
-  constructor() {
+  constructor(props) {
     super();
     this.state = {
       characterOptions: [],
-      selectedCharacter: ''
+      selectedCharacter: '',
     }
   }
 
   componentDidMount = () => {
-    const characterList = characters.map( character => {
+    const characterList = characterNames.map( character => {
       return (
-        <option value={character.name.toString()} key={Math.random()}> {character.name}</option>
+        <option value={character} key={Math.random()}> {character}</option>
       )
     });
-    this.setState({ characterOptions: characterList })
+    this.setState({ characterOptions: characterList });
   };
+
 
   render() {
     return (

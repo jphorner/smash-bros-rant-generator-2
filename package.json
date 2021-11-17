@@ -21,7 +21,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:3001",
+  "proxy": "https://smashbros-unofficial-api.vercel.app/",
   "eslintConfig": {
     "extends": [
       "react-app",

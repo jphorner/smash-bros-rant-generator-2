@@ -1,7 +1,7 @@
 .rant-card {
   position: relative;
   padding: 1rem;
-  width: 40%;
+  max-width: 40%;
   background: rgb(209,0,0);
   background: linear-gradient(117deg, rgba(209,0,0,1) 0%, rgba(255,112,64,1) 100%);
   color: black;

@@ -8,12 +8,12 @@ const Rants = (props) => {
   const rantCollection = [];
   const matchingCharacter = data.find( character => character.name === selection);
   rantCollection.push(matchingCharacter);
-  console.log(rantCollection);
 
   const characterRants = rantCollection.map( character => {
     if (character) {
       return (
         <RantCard
+          characters={data}
           key={Math.random()}
           name={character.name}
           alsoAppearsIn={character.alsoAppearsIn}
@@ -26,9 +26,11 @@ const Rants = (props) => {
   })
 
   return (
-    <div className="rant-display">
-      {rantCollection.length && characterRants}
-    </div>
+    <section className="rants-container">
+      <div className="rant-display">
+        {rantCollection.length && characterRants}
+      </div>
+    </section>
   )
 }
 
