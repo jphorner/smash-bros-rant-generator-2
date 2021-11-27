@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/jphorner/smash-bros-rant-generator-2static/css/main.dd5e57f3.chunk.css",
+    "main.js": "/jphorner/smash-bros-rant-generator-2static/js/main.d37e6380.chunk.js",
+    "main.js.map": "/jphorner/smash-bros-rant-generator-2static/js/main.d37e6380.chunk.js.map",
+    "runtime-main.js": "/jphorner/smash-bros-rant-generator-2static/js/runtime-main.0d621472.js",
+    "runtime-main.js.map": "/jphorner/smash-bros-rant-generator-2static/js/runtime-main.0d621472.js.map",
+    "static/js/2.b4595d2e.chunk.js": "/jphorner/smash-bros-rant-generator-2static/js/2.b4595d2e.chunk.js",
+    "static/js/2.b4595d2e.chunk.js.map": "/jphorner/smash-bros-rant-generator-2static/js/2.b4595d2e.chunk.js.map",
+    "static/js/3.3bd1fee8.chunk.js": "/jphorner/smash-bros-rant-generator-2static/js/3.3bd1fee8.chunk.js",
+    "static/js/3.3bd1fee8.chunk.js.map": "/jphorner/smash-bros-rant-generator-2static/js/3.3bd1fee8.chunk.js.map",
+    "index.html": "/jphorner/smash-bros-rant-generator-2index.html",
+    "static/css/main.dd5e57f3.chunk.css.map": "/jphorner/smash-bros-rant-generator-2static/css/main.dd5e57f3.chunk.css.map",
+    "static/js/2.b4595d2e.chunk.js.LICENSE.txt": "/jphorner/smash-bros-rant-generator-2static/js/2.b4595d2e.chunk.js.LICENSE.txt",
+    "static/media/Form.css": "/jphorner/smash-bros-rant-generator-2static/media/fire-station-15.1727e01c.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0d621472.js",
+    "static/js/2.b4595d2e.chunk.js",
+    "static/css/main.dd5e57f3.chunk.css",
+    "static/js/main.d37e6380.chunk.js"
+  ]
+}
